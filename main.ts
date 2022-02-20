@@ -16,7 +16,6 @@ radio.onReceivedValue(function (name, value) {
     radio.setFrequencyBand(20)
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    input.calibrateCompass()
     input.setSoundThreshold(SoundThreshold.Loud, 100)
     music.ringTone(277)
     music.setBuiltInSpeakerEnabled(true)
@@ -31,6 +30,7 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
         radio.setGroup(9)
         basic.pause(100)
     }
+    input.calibrateCompass()
 })
 let Radiopidia = 0
 basic.showString("Hello!")
